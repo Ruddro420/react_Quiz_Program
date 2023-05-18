@@ -5,12 +5,10 @@ import './SingleQuiz.css';
 import { useState } from "react";
 import { Toaster } from "react-hot-toast";
 
-const SingleQuiz = ({ quiz, ansHandler, click, correct, getAnswer }) => {
+const SingleQuiz = ({ quiz, ansHandler, click, getAnswer }) => {
     const [disabledData, setDisabledData] = useState(false);
     const { id, question, options } = quiz;
     let numberShow = 1;
-
-    console.log(click);
 
     // For Click Button Style 
     const getButtonStyle = (option) => {
@@ -38,7 +36,7 @@ const SingleQuiz = ({ quiz, ansHandler, click, correct, getAnswer }) => {
                                         options.map(option =>
 
                                             <button
-                                                style={getButtonStyle(option, correct)}
+                                                style={getButtonStyle(option)}
                                                 disabled={disabledData}
                                                 key={option}
                                                 onClick={() => ansHandler(option, id, setDisabledData)}

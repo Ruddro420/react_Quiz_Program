@@ -1,12 +1,19 @@
-.card-img{
+.card-img {
     height: 400px;
     background-color: black;
+    border-top-left-radius: 100px;
+    border-bottom-right-radius: 100px;
 }
 
-.border-card{
-    border: 2px solid black;
+.border-card {
+    border: 4px solid rgb(12, 158, 87);
+    border-top-left-radius: 100px !important;
+    border-bottom-right-radius: 100px !important;
 }
-.button-start{
-    background-color: black!important;
+
+.button-start {
+
+    background: linear-gradient(144deg, rgba(2, 0, 36, 1) 0%, rgba(0, 0, 0, 1) 43%, rgba(0, 212, 255, 1) 100%);
     color: white!important;
+    font-weight: 900!important;
 }
