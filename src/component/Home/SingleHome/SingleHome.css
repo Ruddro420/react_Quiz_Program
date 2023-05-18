@@ -1,0 +1,12 @@
+.card-img{
+    height: 400px;
+    background-color: black;
+}
+
+.border-card{
+    border: 2px solid black;
+}
+.button-start{
+    background-color: black!important;
+    color: white!important;
+}
