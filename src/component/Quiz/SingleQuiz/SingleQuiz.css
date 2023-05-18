@@ -1,0 +1,28 @@
+@media (min-width: 1200px){
+.css-1oqqzyl-MuiContainer-root {
+    max-width: 100%!important;
+    text-align: left!important;
+}
+}
+
+.quizStyle{
+    
+    margin:20px;
+    border:2px solid black;
+    padding:10px;
+    border-radius:4px;
+    width: 70%;
+    cursor: pointer;
+    text-align: left;
+}
+
+.disabledStyle{
+    background-color: rgb(220, 217, 217);
+    color: rgb(0, 0, 0);
+    margin:20px;
+    border:2px solid black;
+    padding:10px;
+    border-radius:4px;
+    width: 70%;
+    text-align: left;
+}
