@@ -26,3 +26,12 @@
     width: 70%;
     text-align: left;
 }
+
+.card-container{
+    background: rgb(246, 246, 246);
+    color: black;
+    padding: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: inset;
+}

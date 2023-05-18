@@ -1,7 +1,8 @@
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import SingleQuiz from "../SingleQuiz/SingleQuiz";
 // eslint-disable-next-line no-unused-vars
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 
 const ShowQuiz = () => {
      
@@ -13,13 +14,10 @@ const ShowQuiz = () => {
      const [click, setClick] = useState(false);
      const [correct,setCorrect] = useState(false);
      const [getAnswer,setGetAnswer] = useState([]);
-     console.log(getAnswer);
-
 
        /* console.log(quiz); */
        const ansHandler = (option,getId,setDisabledData) => {
-
-
+        
         setDisabledData(true);
         setClick(option);
 
@@ -29,10 +27,12 @@ const ShowQuiz = () => {
         if(findId.correctAnswer === option){
             setCorrect(true)
             setGetAnswer(findId.correctAnswer)
+            toast.success('Ans Is Write!')
         }
         else{
             setCorrect(false)
             setGetAnswer(findId.correctAnswer)
+            toast.error("Answer Is Wrong")
         }
 
         // get quiz final answer
@@ -46,9 +46,11 @@ const ShowQuiz = () => {
 
     return (
         <>
-            <div>
-                <h2 style={{ textAlign: 'center', fontSize: '50px', marginTop: '50px', marginBottom: '50px' }}>Quiz List</h2>
+      
+            <div style={{ textAlign: 'center', fontSize: '50px', marginTop: '50px', marginBottom: '50px' }}>
+                <NavLink to='/'>Quiz List</NavLink>
             </div>
+            
             <div>
                 {
                     quizs.map(quiz => <SingleQuiz
